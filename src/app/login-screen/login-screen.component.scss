@@ -1,0 +1,14 @@
+@mixin centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton-login{
+    @include centrar;
+    margin-top: 10px;
+    width: 30%;
+}
+#login{
+    @include centrar();
+    margin-top: 15%;
+}

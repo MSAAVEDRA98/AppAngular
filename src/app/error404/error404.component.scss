@@ -1,0 +1,11 @@
+@mixin centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#titulo{
+    @include centro();
+}
+.card{
+    width: 75%;
+}
