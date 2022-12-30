@@ -1,0 +1,20 @@
+.tarjeta-vista{
+    margin: 15px;
+    box-shadow: 0 0 5px;
+    border-radius: 10px;
+}
+.contenedor-acerca{
+    display: flex;
+    align-items: baseline;
+}
+textarea{
+    display: flex;
+    width: 50%;
+    height: 50%;
+    border: 3px solid;
+    resize: none;
+}
+.textarea{
+    display: flex;
+    justify-content: center;
+}

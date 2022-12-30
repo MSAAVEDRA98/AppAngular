@@ -9,43 +9,6 @@ export class MainPageComponent implements OnInit {
 
   constructor() { }
 
-  //INFORMACION PERSONAL
-evento (){
-  let botonGuardar:any = document.getElementById("botonGuardar");
-  let situacionLaboral:any = document.getElementById("situacionLaboral");
-  let localidad:any = document.getElementById("localidad");
-  let inputNombre:any = document.getElementById("nombreCompleto");
-  botonGuardar.classList.remove("disabled");
-  inputNombre.disabled = false;
-  situacionLaboral.disabled = false;
-  localidad.disabled = false;
-}
-guardar(){
-  let botonGuardar:any = document.getElementById("botonGuardar");
-  let situacionLaboral:any = document.getElementById("situacionLaboral");
-  let localidad:any = document.getElementById("localidad");
-  let inputNombre:any = document.getElementById("nombreCompleto");
-  botonGuardar.classList.add("disabled");
-  inputNombre.disabled = true;
-  situacionLaboral.disabled = true;
-  localidad.disabled = true;
-}
-
-//Box de ACERCA DE
-editarDescripcion(){
-  let informacion:any = document.getElementById("informacion");
-  let guardarDescripcion:any = document.getElementById("descripcion");
-  informacion.disabled = false;
-  guardarDescripcion.classList.remove("disabled");
-}
-guardarDescripcion(){
-  let informacion:any = document.getElementById("informacion");
-  let guardarDescripcion:any = document.getElementById("descripcion");
-  informacion.disabled = true;
-  guardarDescripcion.classList.add("disabled");
-}
-
-
 //FORMACION ACADEMICA
 agregarAlgo(){
   let contenedorExp:any = document.getElementById("contenedor-exp");

@@ -8,27 +8,11 @@
 .bg-mine{
     background-color: rgb(152, 152, 152);
 }
-.perfil{
-    width: 10%;
-    margin-left: 10px;
-}
 .perfil-dos{
     width: 25%;
 }
 .editar{
     width: 30px;
-}
-.card-img{
-    height: 500px;
-}
-.contenedor-acerca{
-    display: flex;
-    align-items: baseline;
-}
-.tarjeta-vista{
-    margin: 15px;
-    box-shadow: 0 0 5px;
-    border-radius: 10px;
 }
 .contenedor-exp{
     display: flex;
@@ -53,17 +37,6 @@ input{
     background-color: white;
     border: 0;
     width: 99%;
-}
-.textarea{
-    display: flex;
-    justify-content: center;
-}
-textarea{
-    display: flex;
-    width: 50%;
-    height: 50%;
-    border: 3px solid;
-    resize: none;
 }
 .boton-secreto{
     background-color: white;

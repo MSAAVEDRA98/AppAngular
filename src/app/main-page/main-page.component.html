@@ -1,129 +1,83 @@
-        <!-- Informacion personal -->
-        <div class="card tarjeta-vista">
-            <img src="/assets/imagen/fondo-gris.jpg" class="card-img" alt="Fondo-perdil">
-            <div class="card-body">
-                <div class="foto-perfil">
-                    <img class="perfil" src="/assets/imagen/foto-perfil.png" alt="Foto perfil">
-                    <div>
-                        <img class="editar" src="/assets/imagen/editar.png" alt="">
-                    </div>
-                </div>
-                <button class="btn btn-success" (click)="evento()">Editar</button>
-                <button class="btn btn-primary disabled" (click)="guardar()" id="botonGuardar">Guardar</button>
-                <form action="">
-                    <table class="table">
-                        <tr>
-                            <th>
-                                <label for="nombreCompleto"></label>
-                                <input id="nombreCompleto" type="text" placeholder="Nombre y apellido" disabled>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="situacionLaboral"></label>
-                                <input id="situacionLaboral" type="text" placeholder="Situacion laboral" disabled>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="localidad"></label>
-                                <input id="localidad" type="text" placeholder="localidad" disabled>
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
-        </div>
+<!-- BARRA DE NAVEGACION -->
+<app-barra-navegacion></app-barra-navegacion>
+
+<!-- Informacion personal -->
+<app-info-personal></app-info-personal>
 
 
-        <!-- Acerca de  -->
-        <div class="card tarjeta-vista">
-            <div class="card-body">
-                <div class="contenedor-acerca">
-                    <h1>Acerca de</h1>
-                    <div>
-                        <button class="btn btn-success" (click)="editarDescripcion()">Editar</button>
-                        <button id="descripcion" class="btn btn-primary disabled"
-                            (click)="guardarDescripcion()">Guardar</button>
-                    </div>
-                </div>
-                <div class="textarea">
-                    <textarea id="informacion" cols="30" rows="10" placeholder="Ingresar informacion personal"
-                        disabled></textarea>
-                </div>
-            </div>
-        </div>
+<!-- Acerca de  -->
+<app-acerca-de-personal></app-acerca-de-personal>
 
-        <!-- Experiencia laboral e informacion academica  -->
+<!-- Experiencia laboral e informacion academica  -->
 
-        <div class="card tarjeta-vista">
-            <div class="card-body">
-                <!-- Formacion academica -->
-                <div class="contenedor-exp">
-                    <div>
-                        <h2>Formación academica</h2>
-                    </div>
-                    <div>
-                        <button id="botonOculto" class="boton-secreto" (click)="agregarAlgo(); esconder()">
-                            <img id="editar" class="editar" src="/assets/imagen/mas.png" alt="Agregar">
-                        </button>
-                    </div>
-                </div>
-                <div id="contenedor-exp">
-                </div>
-                <!-- Experiencia -->
-                <div class="contenedor-academia">
-                    <h2>Experiencia</h2>
-                    <div>
-                        <button id="boton2" class="boton-secreto" (click)="agregarOtraCosa(); esconder2()">
-                            <img class="editar" src="/assets/imagen/mas.png" alt="Agregar">
-                        </button>
-                    </div>
-                </div>
-                <div id="contenedor-academia"></div>
-            </div>
+<div class="card tarjeta-vista">
+  <div class="card-body">
+    <!-- Formacion academica -->
+    <div class="contenedor-exp">
+      <div>
+        <h2>Formación academica</h2>
+      </div>
+      <div>
+        <button id="botonOculto" class="boton-secreto" (click)="agregarAlgo(); esconder()">
+          <img id="editar" class="editar" src="/assets/imagen/mas.png" alt="Agregar">
+        </button>
+      </div>
+    </div>
+    <div id="contenedor-exp">
+    </div>
+    <!-- Experiencia -->
+    <div class="contenedor-academia">
+      <h2>Experiencia</h2>
+      <div>
+        <button id="boton2" class="boton-secreto" (click)="agregarOtraCosa(); esconder2()">
+          <img class="editar" src="/assets/imagen/mas.png" alt="Agregar">
+        </button>
+      </div>
+    </div>
+    <div id="contenedor-academia"></div>
+  </div>
 
-            
-        </div>
 
-        <!-- HARD AND SOFT SKILLS -->
-        <div class="card tarjeta-vista">
-            <div class="card-body">
-                <h2>Hard Skills & Soft Skills</h2>
-                <div class="row tarjetas">
-                    <div class="col-sm-4 hs-skill">
-                        Analisis de Situacion
-                        <img class="perfil-dos" src="imagen/grafico.png" alt="grafico">
-                    </div>
-                    <div class="col-sm-4 hs-skill">
-                        Toma de Decisiones
-                        <img class="perfil-dos" src="imagen/grafico.png" alt="grafico">
-                    </div>
-                    <div class="col-sm-4 hs-skill">
-                        Trabajo en equipo
-                        <img class="perfil-dos" src="imagen/grafico.png" alt="grafico">
-                    </div>
-                </div>
-            </div>
-        </div>
+</div>
 
-        <!-- PROYECTOS -->
+<!-- HARD AND SOFT SKILLS -->
+<div class="card tarjeta-vista">
+  <div class="card-body">
+    <h2>Hard Skills & Soft Skills</h2>
+    <div class="row tarjetas">
+      <div class="col-sm-4 hs-skill">
+        Analisis de Situacion
+        <img class="perfil-dos" src="assets/imagen/grafico.png" alt="grafico">
+      </div>
+      <div class="col-sm-4 hs-skill">
+        Toma de Decisiones
+        <img class="perfil-dos" src="assets/imagen/grafico.png" alt="grafico">
+      </div>
+      <div class="col-sm-4 hs-skill">
+        Trabajo en equipo
+        <img class="perfil-dos" src="assets/imagen/grafico.png" alt="grafico">
+      </div>
+    </div>
+  </div>
+</div>
 
-        <div class="card tarjeta-vista">
-            <div class="card-body">
-                <h2>Proyectos</h2>
-                <div class="contenedor-exp">
-                    <h4>Agregar un proyecto</h4>
-                    <div>
-                        <button class="boton-secreto">
-                            <img class="editar" src="imagen/mas.png" alt="Agregar">
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <footer>
+<!-- PROYECTOS -->
+
+<div class="card tarjeta-vista">
+  <div class="card-body">
+    <h2>Proyectos</h2>
+    <div class="contenedor-exp">
+      <h4>Agregar un proyecto</h4>
+      <div>
+        <button class="boton-secreto">
+          <img class="editar" src="assets/imagen/mas.png" alt="Agregar">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
 
 
 
-    </footer>
+</footer>

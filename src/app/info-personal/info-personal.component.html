@@ -1,0 +1,36 @@
+<!-- Informacion personal -->
+<div class="card tarjeta-vista">
+    <img src="/assets/imagen/fondo-gris.jpg" class="card-img" alt="Fondo-perdil">
+    <div class="card-body">
+        <div class="foto-perfil">
+        <img class="perfil" src="/assets/imagen/foto-perfil.png" alt="Foto perfil">
+        <div>
+            <img class="editar" src="/assets/imagen/editar.png" alt="">
+        </div>
+        </div>
+        <button class="btn btn-success" (click)="evento()">Editar</button>
+        <button class="btn btn-primary disabled" (click)="guardar()" id="botonGuardar">Guardar</button>
+        <form action="">
+        <table class="table">
+            <tr>
+            <th>
+                <label for="nombreCompleto"></label>
+                <input id="nombreCompleto" type="text" placeholder="Nombre y apellido" disabled>
+            </th>
+            </tr>
+            <tr>
+            <td>
+                <label for="situacionLaboral"></label>
+                <input id="situacionLaboral" type="text" placeholder="Situacion laboral" disabled>
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <label for="localidad"></label>
+                <input id="localidad" type="text" placeholder="localidad" disabled>
+            </td>
+            </tr>
+        </table>
+        </form>
+    </div>
+    </div>
