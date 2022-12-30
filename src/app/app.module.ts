@@ -11,6 +11,8 @@ import { Error404Component } from './error404/error404.component';
 import { InfoPersonalComponent } from './info-personal/info-personal.component';
 import { BarraNavegacionComponent } from './barra-navegacion/barra-navegacion.component';
 import { AcercaDePersonalComponent } from './acerca-de-personal/acerca-de-personal.component';
+import { LaboralYacademicaComponent } from './laboral-yacademica/laboral-yacademica.component';
+import { PruebasComponent } from './pruebas/pruebas.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { AcercaDePersonalComponent } from './acerca-de-personal/acerca-de-person
     Error404Component,
     InfoPersonalComponent,
     BarraNavegacionComponent,
-    AcercaDePersonalComponent
+    AcercaDePersonalComponent,
+    LaboralYacademicaComponent,
+    PruebasComponent
   ],
   imports: [
     BrowserModule,
