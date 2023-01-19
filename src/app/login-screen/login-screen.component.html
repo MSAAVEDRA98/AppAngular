@@ -1,17 +1,30 @@
-<div id="login">
-  <div class="row">
-    <div class="card">
-      <label for="usuario" class="form-label">Nombre de usuario</label>
-      <input type="text" class="form-control" id="usuario">
-      <label for="Contraseña" class="form-label">Contraseña</label>
-      <input type="password" class="form-control" id="Contraseña">
+<div id="card-bod">
+  <div class="card">
+    <form [formGroup]="miFormulario">
+      <div>
+        <div id="username">
+          <label for="usuario">Usuario</label>
+        </div>
+        <input
+        [class.is-invalid]="miFormulario.get('usuario')?.touched && miFormulario.get('usuario')?.invalid"
+        type="text"
+        class="form-control"
+        formControlName="usuario"
+        >
+      </div>
+      <div>
+        <div>
+          <label for="contraseña">Contraseña</label>
+        </div>
+        <input
+        [class.is-invalid]="miFormulario.get('contraseña')?.touched && miFormulario.get('contraseña')?.invalid"
+        type="password"
+        class="form-control"
+        formControlName="contraseña">
+      </div>
       <div>
         <button class="btn btn-success boton-login" routerLink="/ingresar">Ingresar</button>
-        <a routerLink="/cuentaNueva">Crear una cuenta</a>
-        <div>
-          <a routerLink="/olvidoContraseña">¡Me olvidé la constraseña!</a>
-        </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>

@@ -1,14 +1,26 @@
-@mixin centrar{
+@mixin centrarX{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+@mixin centrarY {
+    display: flex;
+    margin-top: 200px;
+}
 .boton-login{
-    @include centrar;
-    margin-top: 10px;
-    width: 30%;
+    @include centrarX();
+    margin: 5px;
+    width: 50%;
 }
 #login{
-    @include centrar();
+    @include centrarX();
     margin-top: 15%;
+}
+.card{
+    width: 200px;
+    box-shadow: 0px 0px 19px 2px rgba(0,0,0,0.65);
+}
+#card-bod{
+    @include centrarX();
+    @include centrarY();
 }
