@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../Servicios/auth.service';
 
 @Component({
   selector: 'app-login-screen',
@@ -8,7 +9,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginScreenComponent implements OnInit {
 
-  constructor() { }
+  usuario = '';
+  contraseña = '';
+
+  constructor(private authService: AuthService) { }
+
+  login(){
+    this.authService.login(this.usuario, this.contraseña)
+  }
 
   miFormulario = new FormGroup({
     usuario : new FormControl('', Validators.required),

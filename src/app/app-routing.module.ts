@@ -6,9 +6,9 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { Error404Component } from './error404/error404.component';
 
 const routes: Routes = [
-  {path:'', component: LoginScreenComponent},
-  {path:'home', component: LoginScreenComponent},
-  {path:'ingresar', component: MainPageComponent},
+  {path:'', component: MainPageComponent},
+  {path:'login', component: LoginScreenComponent},
+  {path:'perfil', component: MainPageComponent},
   {path:'**', component: Error404Component},
 ];
 
