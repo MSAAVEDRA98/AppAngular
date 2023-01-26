@@ -7,9 +7,11 @@
             aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a routerLink="/login" routerLinkActive="active" *ngIf="!authService.LogIn">LogIn</a>
-          <a routerLink="/login" routerLinkActive="active" *ngIf="authService.LogIn">LogOut</a>
-          <a href="#" class="nav-link" (click)="logout()"></a>
+          <a routerLink="/login" routerLinkActive="active">Inicio</a>
+          <a routerLink="/prefil" routerLinkActive="active" *ngIf="authService.logIn">Perfil</a>
+          <a routerLink="login" routerLinkActive="active" *ngIf="!authService.logIn">Login</a>
+          <a class="nav-link" (click)="logout()" href="#" *ngIf="authService.logIn">Logout</a>
+
         </div>
       </nav>
     </div>

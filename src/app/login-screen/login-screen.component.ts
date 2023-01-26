@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators, FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { AuthService } from '../Servicios/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-screen',
@@ -9,19 +11,40 @@ import { AuthService } from '../Servicios/auth.service';
 })
 export class LoginScreenComponent implements OnInit {
 
-  usuario = '';
-  contraseña = '';
+  form: FormGroup;
 
-  constructor(private authService: AuthService) { }
-
-  login(){
-    this.authService.login(this.usuario, this.contraseña)
+  constructor(private authService: AuthService, private formBuilder: FormBuilder, private router:Router) {
+    this.form = this.formBuilder.group({
+      usuario:['',[Validators.required,Validators.minLength(5),Validators.maxLength(12)]],
+      password:['',[Validators.required,Validators.minLength(8),Validators.maxLength(15)]]
+    })
   }
 
-  miFormulario = new FormGroup({
-    usuario : new FormControl('', Validators.required),
-    contraseña : new FormControl('', Validators.required)
-  });
+  onEnviar(evento:Event){
+    evento.preventDefault;
+    if(this.form.valid){
+      this.router.navigate(['/perfil']);
+    }
+    else{
+      this.form.markAllAsTouched();
+    }
+  }
+
+  get usuario(){
+    return(this.form.get('usuario'))
+  }
+
+  get password(){
+    return(this.form.get('password'))
+  }
+
+  get passwordValid(){
+    return(this.password?.touched && !this.password.valid);
+  }
+
+  get usuarioValido(){
+    return(false);
+  }
 
   ngOnInit(): void {
   }
