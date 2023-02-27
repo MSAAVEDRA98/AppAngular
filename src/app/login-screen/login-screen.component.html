@@ -26,7 +26,7 @@
         formControlName="password">
       </div>
       <label for="password">
-        <p *ngIf="password?.errors?.['minlength']">
+        <p *ngIf="password?.errors?.['minlength']" class="error">
           Minimo de Caracteres esperados (8)
         </p>
         <p *ngIf='password?.touched && !password?.valid' class="error" >
