@@ -7,11 +7,10 @@ import { Error404Component } from './error404/error404.component';
 import { AuthGuard } from './Servicios/auth.guard';
 
 const routes: Routes = [
-  {path:'', component: LoginScreenComponent},
+  {path:'', component: LoginScreenComponent, pathMatch:'full'},
   {path:'login', component: LoginScreenComponent},
   {path:'perfil',
-  component: MainPageComponent,
-  canActivate: [AuthGuard]},
+  component: MainPageComponent},
   {path:'**', component: Error404Component},
 ];
 

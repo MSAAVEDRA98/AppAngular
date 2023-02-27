@@ -27,6 +27,7 @@ export class LoginScreenComponent implements OnInit {
     }
     else{
       this.form.markAllAsTouched();
+      alert('Pone bien los datos Chango!');
     }
   }
 

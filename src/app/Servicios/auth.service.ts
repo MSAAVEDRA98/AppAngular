@@ -7,13 +7,13 @@ import { Router, RouterModule } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  url = 'http://localhost:4200/home';
+  url = 'http://localhost:4200';
   token:any;
   constructor(private http:HttpClient, private router:Router) { }
     login(usuario:String, contraseña:string){
       this.http.post(this.url+'/autenticate', {usuario:usuario, contraseña:contraseña})
       .subscribe((resp:any)=> {
-        this.router.navigate(['perfil']);
+        this.router.navigate(['/perfil']);
         localStorage.setItem('auth_token',resp.token);
       })
     }
@@ -21,6 +21,6 @@ export class AuthService {
       localStorage.removeItem('token');
     }
     public get logIn():boolean{
-      return(localStorage.getItem('token')!== null);
+      return(localStorage.getItem('token')== null);
     }
   }
